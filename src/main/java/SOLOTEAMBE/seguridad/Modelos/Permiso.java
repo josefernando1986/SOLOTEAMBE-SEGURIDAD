@@ -1,4 +1,4 @@
-package Modelos;
+package SOLOTEAMBE.seguridad.Modelos;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,7 +13,7 @@ public class Permiso {
 
     public Permiso(String url, String metodo){
         this.url = url;
-        this.url = metodo;
+        this.metodo = metodo;
     }
 
     public String get_id() {

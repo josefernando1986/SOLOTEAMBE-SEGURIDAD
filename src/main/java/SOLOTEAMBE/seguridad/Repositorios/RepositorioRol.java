@@ -1,6 +1,6 @@
-package Repositorios;
+package SOLOTEAMBE.seguridad.Repositorios;
 
-import Modelos.Rol;
+import SOLOTEAMBE.seguridad.Modelos.Rol;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface RepositorioRol extends MongoRepository<Rol, String> {
