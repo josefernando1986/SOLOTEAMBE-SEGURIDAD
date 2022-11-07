@@ -1,6 +1,7 @@
 package SOLOTEAMBE.seguridad.Modelos;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document()
@@ -10,6 +11,8 @@ public class Usuario {
     private String seudonimo;
     private String correo;
     private String contrasena;
+    @DBRef
+    private Rol rol;
 
     public Usuario(String seudonimo, String correo, String contrasena){
         this.seudonimo = seudonimo;
@@ -43,5 +46,13 @@ public class Usuario {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
+    }
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 }
